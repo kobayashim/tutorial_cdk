@@ -17,6 +17,15 @@
     ]
   },
   "context": {
+    "prd": {
+      "key": "value1"    
+    },     
+    "stg": {
+      "key": "value2"    
+    }, 
+    "dev": {
+      "key": "value3"    
+    }, 
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [

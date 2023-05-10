@@ -9,7 +9,11 @@ export class TutorialCdkStack extends cdk.Stack {
     super(scope, id, props);
 
     // ステージを取得[デフォルト:dev]
-    const stage = this.node.getContext('stage') || 'dev'
+    const stage = this.node.tryGetContext('stage')
+
+    // ステージ別のコンテキストを取得
+    const context = this.node.tryGetContext(stage)
+    console.log(context)
 
     // DynamoDBの作成
     const table = new dynamodb.Table(this, `counts`, {

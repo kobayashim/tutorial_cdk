@@ -4,7 +4,7 @@ import * as cdk from 'aws-cdk-lib';
 import { TutorialCdkStack } from '../lib/tutorial_cdk-stack';
 
 const app = new cdk.App();
-const stage = app.node.getContext('stage') || 'dev'
+const stage = app.node.getContext('stage')
 new TutorialCdkStack(app, `TutorialCdkStack-${stage}`, {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
